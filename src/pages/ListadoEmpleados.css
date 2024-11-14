@@ -69,11 +69,12 @@
     font-size: 0.85rem; /* Tamaño de fuente reducido en botones */
     padding: 0.5rem 1rem; /* Ajuste de padding para compactar */
 }
-.empleado-seleccionado {
-    background-color: #e0f7fa; /* Cambia de color cuando el mouse pasa sobre el empleado */
+.empleado-hover {
+    background-color: #e0f7fa; /* Color de fondo al pasar el mouse */
     border: 1px solid #00796b;
     border-radius: 5px;
     padding: 10px;
+    margin: 5px 0;
     position: relative;
 }
 
@@ -82,11 +83,14 @@
     align-items: center;
     color: #00796b;
     font-weight: bold;
-    margin-top: 10px;
-    font-size: 14px;
+    margin-top: 5px;
+    visibility: hidden; /* Oculto por defecto */
+}
+
+.empleado-hover .seleccion-indicador {
+    visibility: visible; /* Visible al pasar el mouse */
 }
 
 .seleccion-indicador i {
     margin-right: 5px;
 }
-

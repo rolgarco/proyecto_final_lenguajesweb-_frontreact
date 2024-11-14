@@ -3,14 +3,12 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 import './ListadoEmpleados.css';
 
 function ListadoEmpleados() {
     const [empleados, setEmpleados] = useState([]);
     const [empleadoEditado, setEmpleadoEditado] = useState(null);
-    const [empleadoSeleccionado, setEmpleadoSeleccionado] = useState(null); // Nuevo estado
-    const navigate = useNavigate(); // Inicializa el hook de navegación
+    const [empleadoSeleccionado, setEmpleadoSeleccionado] = useState(null);
 
     useEffect(() => {
         cargarEmpleados();
@@ -37,7 +35,6 @@ function ListadoEmpleados() {
             cargarEmpleados();
             setEmpleadoEditado(null);
             setEmpleadoSeleccionado(null);
-            navigate('/'); // Redirige a la página de inicio después de actualizar
         } catch (error) {
             Swal.fire('Error', 'Error al actualizar el empleado', 'error');
         }
@@ -61,7 +58,6 @@ function ListadoEmpleados() {
                 cargarEmpleados();
                 setEmpleadoEditado(null);
                 setEmpleadoSeleccionado(null);
-                navigate('/'); // Redirige a la página de inicio después de eliminar
             }
         } catch (error) {
             Swal.fire('Error', 'Error al eliminar el empleado', 'error');
@@ -70,7 +66,7 @@ function ListadoEmpleados() {
 
     const handleEditClick = (empleado) => {
         setEmpleadoEditado(empleado);
-        setEmpleadoSeleccionado(empleado.idEmpleados); // Guardar el empleado seleccionado
+        setEmpleadoSeleccionado(empleado.idEmpleados);
     };
 
     return (
@@ -82,7 +78,9 @@ function ListadoEmpleados() {
                         <li 
                             key={empleado.idEmpleados} 
                             onClick={() => handleEditClick(empleado)}
-                            className={empleadoSeleccionado === empleado.idEmpleados ? "empleado-seleccionado" : ""}
+                            onMouseEnter={() => setEmpleadoSeleccionado(empleado.idEmpleados)}
+                            onMouseLeave={() => setEmpleadoSeleccionado(null)}
+                            className={empleadoSeleccionado === empleado.idEmpleados ? 'empleado-hover' : ''}
                         >
                             <p>Empresa: {empleado.empresa}</p>
                             <p>Nombre Completo: {empleado.nombreCompleto}</p>
@@ -93,6 +91,11 @@ function ListadoEmpleados() {
                             <p>Correo Electrónico: {empleado.correoElectronicoE}</p>
                             <p>Teléfono: {empleado.telefonoE}</p>
                             <p>Domicilio: {empleado.domicilio}</p>
+                            {empleadoSeleccionado === empleado.idEmpleados && (
+                                <span className="seleccion-indicador">
+                                    <i className="pi pi-pencil"></i> Selecciona para editar o eliminar
+                                </span>
+                            )}
                         </li>
                     ))}
                 </ul>
