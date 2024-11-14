@@ -1,0 +1,85 @@
+/* ListadoUsuarios.css */
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.listado-usuarios {
+    flex: 3;
+    border-right: 1px solid #ddd;
+    padding-right: 20px;
+}
+
+.detalle-usuario {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.listado-usuarios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.listado-usuarios li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.listado-usuarios li:hover {
+    background-color: #f0f0f0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.botones-accion {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+.regresar-boton {
+    width: auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+} 
+
+.usuario-hover {
+    background-color: #b4e9f0; /* Color de fondo al pasar el mouse */
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    position: relative;
+}
+
+.seleccion-indicador {
+    display: flex;
+    align-items: center;
+    color: #2c5550;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.usuario-hover .seleccion-indicador {
+    visibility: visible;
+}
+
+.seleccion-indicador i {
+    margin-right: 4px;
+}

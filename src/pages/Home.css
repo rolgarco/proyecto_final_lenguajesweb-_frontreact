@@ -1,0 +1,64 @@
+/* home.css */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Cambiado de space-between a flex-start */
+    min-height: 93vh;
+    padding-top: 60px; /* Ajuste para dar espacio entre el navbar y los contenidos */
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* No es necesario centrar los elementos horizontalmente ya que son flex-start */
+    flex-grow: 1;
+    text-align: center;
+    gap: 20px; /* Espacio entre el título, logo y texto */
+}
+
+.welcome-text {
+    font-size: 1.5em; /* Ajusta el tamaño del texto */
+    font-weight: bold;
+    color: #35404b;
+    margin-bottom: 0; /* Sin separación adicional para que no se "empalme" con el footer */
+}
+
+.home-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #35404b;
+}
+
+.home-logo {
+    width: 250px;
+    height: auto;
+    margin-bottom: 30px; /* Espacio entre el logo y el texto de bienvenida */
+}
+
+.logout-button {
+    padding: 0.5rem 1rem;
+    width: auto;
+    border: none;
+    border-radius: 25px;
+    background-color: #ee6262;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 80px; /* Sin cambios, se mantiene el botón fijo */
+}
+
+.logout-button:hover {
+    background-color: #0056b3;
+}
+
+.home-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}

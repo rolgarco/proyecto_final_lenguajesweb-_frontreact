@@ -1,0 +1,31 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    background-color: #35404b; /* Color verde olivo */
+    padding: 10px;
+    justify-content: space-around; /* Espacio entre botones */
+}
+
+.nav-button {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    background-color: #556B2F; /* Fondo verde olivo */
+    border: 1px solid #fff;
+    margin: 0 5px; /* Espacio entre botones */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-button:hover {
+    background-color: #6B8E23; /* Un verde olivo más claro al pasar el cursor */
+}
+
+.nav-button i {
+    margin-right: 8px;
+}
+

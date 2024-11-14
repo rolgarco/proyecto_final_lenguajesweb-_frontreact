@@ -1,0 +1,92 @@
+/* Contenedor principal de la página */
+.container {
+    padding: 10px;
+    font-size: 0.9rem;
+    max-width: 1200px; /* Aumenta el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+/* Estilos para el listado de empleados */
+.listado-empleados {
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Estilos para el listado de empleados y detalles */
+.listado-empleados ul,
+.detalle-empleado {
+    max-width: 100%;
+}
+
+.listado-empleados li {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-size: 1rem; /* Tamaño de fuente reducido */
+}
+
+/* Estilos para cada campo de empleado */
+.listado-empleados p {
+    margin: 2px 0; /* Reduce el margen entre los elementos */
+    line-height: 1.3;
+}
+
+/* Estilos para el formulario de edición de empleado */
+.detalle-empleado {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.detalle-empleado h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.detalle-empleado .form-group {
+    margin-bottom: 8px;
+}
+
+.detalle-empleado .form-group label {
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+.detalle-empleado .form-group input {
+    padding: 6px;
+    font-size: 0.85rem;
+}
+
+/* Botones de acción */
+.botones-accion {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.botones-accion .p-button {
+    font-size: 0.85rem; /* Tamaño de fuente reducido en botones */
+    padding: 0.5rem 1rem; /* Ajuste de padding para compactar */
+}
+.empleado-seleccionado {
+    background-color: #e0f7fa; /* Cambia de color cuando el mouse pasa sobre el empleado */
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+
+.seleccion-indicador {
+    display: flex;
+    align-items: center;
+    color: #00796b;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.seleccion-indicador i {
+    margin-right: 5px;
+}
+

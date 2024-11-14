@@ -1,0 +1,50 @@
+/* Asegura que el contenedor principal tome toda la altura de la pantalla */
+.empleados-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Contenedor que incluye el formulario y los botones */
+.empleados-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-grow: 1; /* Permite que este contenedor ocupe el espacio disponible */
+}
+
+/* Estilos para el formulario */
+.empleados-form {
+    flex: 0.6;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilos para los botones */
+.empleados-botones {
+    flex: 0.3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start; 
+    margin-top: 150px; 
+}
+
+.regresar-boton {
+    display: flex;
+    justify-content: center;
+    margin-top: auto; 
+    padding: 20px;
+}
+
+.regresar-boton {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    padding: 0.5rem 1rem;
+}
