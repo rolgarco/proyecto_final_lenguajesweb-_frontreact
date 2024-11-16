@@ -14,7 +14,7 @@ function Login({ onLoginSuccess }) {
 
         try {
             // Hacer la solicitud al backend para verificar las credenciales
-            const response = await axios.post('http://localhost:3000/login', {
+            const response = await axios.post('https://proyecto-final-lenguajesweb-backend.onrender.com/login', {
                 correoElectronico,
                 password
             });

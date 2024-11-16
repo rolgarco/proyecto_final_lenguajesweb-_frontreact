@@ -20,7 +20,7 @@ function Usuarios() {
 
     const agregarUsuario = async () => {
         try {
-            await axios.post('http://localhost:3000/usuarios', nuevoUsuario);
+            await axios.post('https://proyecto-final-lenguajesweb-backend.onrender.com/usuarios', nuevoUsuario);
             Swal.fire('Éxito', 'Usuario agregado', 'success').then(() => {
                 navigate('/usuarios/listado'); 
             });

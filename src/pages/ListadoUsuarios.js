@@ -18,7 +18,7 @@ function ListadoUsuarios() {
 
     const cargarUsuarios = async () => {
         try {
-            const response = await axios.get('http://localhost:3000/usuarios');
+            const response = await axios.get('https://proyecto-final-lenguajesweb-backend.onrender.com/usuarios');
             setUsuarios(response.data);
         } catch (error) {
             Swal.fire('Error', 'Error al cargar los usuarios', 'error');
@@ -27,7 +27,7 @@ function ListadoUsuarios() {
 
     const actualizarUsuario = async () => {
         try {
-            await axios.put(`http://localhost:3000/usuarios/${usuarioEditado.idUsuario}`, usuarioEditado);
+            await axios.put(`https://proyecto-final-lenguajesweb-backend.onrender.com/usuarios/${usuarioEditado.idUsuario}`, usuarioEditado);
             Swal.fire('Éxito', 'Usuario actualizado', 'success');
             cargarUsuarios();
             setUsuarioEditado(null);
@@ -50,7 +50,7 @@ function ListadoUsuarios() {
             });
 
             if (result.isConfirmed) {
-                await axios.delete(`http://localhost:3000/usuarios/${usuarioEditado.idUsuario}`);
+                await axios.delete(`https://proyecto-final-lenguajesweb-backend.onrender.com/usuarios/${usuarioEditado.idUsuario}`);
                 Swal.fire('Eliminado', 'Usuario eliminado correctamente', 'success');
                 cargarUsuarios();
                 setUsuarioEditado(null);

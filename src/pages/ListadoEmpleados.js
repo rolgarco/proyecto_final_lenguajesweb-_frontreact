@@ -16,7 +16,7 @@ function ListadoEmpleados() {
 
     const cargarEmpleados = async () => {
         try {
-            const response = await axios.get('http://localhost:3000/empleados');
+            const response = await axios.get('https://proyecto-final-lenguajesweb-backend.onrender.com/empleados');
             const empleadosFormateados = response.data.map(emp => ({
                 ...emp,
                 fechaNacimiento: emp.fechaNacimiento ? emp.fechaNacimiento.substring(0, 10) : '',
@@ -30,7 +30,7 @@ function ListadoEmpleados() {
 
     const actualizarEmpleado = async () => {
         try {
-            await axios.put(`http://localhost:3000/empleados/${empleadoEditado.idEmpleados}`, empleadoEditado);
+            await axios.put(`https://proyecto-final-lenguajesweb-backend.onrender.com/empleados/${empleadoEditado.idEmpleados}`, empleadoEditado);
             Swal.fire('Éxito', 'Empleado actualizado', 'success');
             cargarEmpleados();
             setEmpleadoEditado(null);
@@ -53,7 +53,7 @@ function ListadoEmpleados() {
             });
 
             if (result.isConfirmed) {
-                await axios.delete(`http://localhost:3000/empleados/${empleadoEditado.idEmpleados}`);
+                await axios.delete(`https://proyecto-final-lenguajesweb-backend.onrender.com/empleados/${empleadoEditado.idEmpleados}`);
                 Swal.fire('Eliminado', 'Empleado eliminado correctamente', 'success');
                 cargarEmpleados();
                 setEmpleadoEditado(null);

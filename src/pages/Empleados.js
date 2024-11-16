@@ -23,7 +23,7 @@ function Empleados() {
 
     const agregarEmpleado = async () => {
         try {
-            await axios.post('http://localhost:3000/empleados', nuevoEmpleado);
+            await axios.post('https://proyecto-final-lenguajesweb-backend.onrender.com/empleados', nuevoEmpleado);
             Swal.fire('Éxito', 'Empleado agregado', 'success').then(() => {
                 navigate('/empleados/listado');
             });    
